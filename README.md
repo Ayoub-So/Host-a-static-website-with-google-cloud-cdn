@@ -2,6 +2,10 @@
 
 This directory contains all files needed to host a static website on Google Cloud Platform (GCP) using Infrastructure as Code with Terraform.
 
+
+https://github.com/user-attachments/assets/a13a881e-2873-4c19-b241-23d24d14d0fa
+
+
 ## 📁 Files Overview
 
 ### Configuration Files
