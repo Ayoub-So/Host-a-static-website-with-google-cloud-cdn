@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Static Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        main {
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .timeline-item h4 {
+            color: #764ba2;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .architecture {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .arch-component {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .arch-component h4 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .arch-component p {
+            margin-bottom: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .architecture {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>About This Project 📚</h1>
+            <p>Learn about our static website infrastructure on Google Cloud</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+            <section>
+                <h2>Project Overview</h2>
+                <p>This project demonstrates how to host a static website efficiently on Google Cloud Platform (GCP) using Infrastructure as Code with Terraform. The website is stored in Google Cloud Storage and distributed globally through Google Cloud CDN.</p>
+                <p>This approach provides:</p>
+                <ul style="margin-left: 30px; margin-top: 10px;">
+                    <li>High availability and reliability</li>
+                    <li>Low latency for users worldwide</li>
+                    <li>Cost efficiency</li>
+                    <li>Easy deployment and management</li>
+                    <li>Built-in security features</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Architecture 🏗️</h2>
+                <p>The infrastructure consists of the following components:</p>
+                <div class="architecture">
+                    <div class="arch-component">
+                        <h4>Cloud Storage</h4>
+                        <p>Stores static files (HTML, CSS, JS, images)</p>
+                    </div>
+                    <div class="arch-component">
+                        <h4>Cloud CDN</h4>
+                        <p>Caches content globally for fast delivery</p>
+                    </div>
+                    <div class="arch-component">
+                        <h4>Load Balancer</h4>
+                        <p>Routes traffic to appropriate resources</p>
+                    </div>
+                    <div class="arch-component">
+                        <h4>SSL/TLS</h4>
+                        <p>Encrypts traffic with HTTPS</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Technology Stack 🛠️</h2>
+                <h3>Infrastructure as Code</h3>
+                <p><strong>Terraform</strong> - We use Terraform to define and manage our infrastructure. This allows us to:</p>
+                <ul style="margin-left: 30px;">
+                    <li>Version control our infrastructure</li>
+                    <li>Replicate environments easily</li>
+                    <li>Maintain consistency across deployments</li>
+                    <li>Collaborate with team members</li>
+                </ul>
+
+                <h3>Cloud Platform</h3>
+                <ul style="margin-left: 30px;">
+                    <li><strong>Google Cloud Storage</strong> - Object storage for static files</li>
+                    <li><strong>Google Cloud CDN</strong> - Content delivery network</li>
+                    <li><strong>Google Cloud Load Balancer</strong> - Traffic distribution</li>
+                    <li><strong>Cloud DNS</strong> - Domain name resolution</li>
+                </ul>
+
+                <h3>Frontend Technologies</h3>
+                <ul style="margin-left: 30px;">
+                    <li><strong>HTML5</strong> - Semantic markup</li>
+                    <li><strong>CSS3</strong> - Modern styling and animations</li>
+                    <li><strong>JavaScript</strong> - Interactive features</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Project Timeline 📅</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">Phase 1: Planning</div>
+                        <h4>Infrastructure Design</h4>
+                        <p>Designed the architecture and selected appropriate GCP services.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">Phase 2: Implementation</div>
+                        <h4>Terraform Configuration</h4>
+                        <p>Created Terraform configurations to provision all resources.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">Phase 3: Development</div>
+                        <h4>Website Creation</h4>
+                        <p>Developed static website files with responsive design.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">Phase 4: Deployment</div>
+                        <h4>Go Live</h4>
+                        <p>Deployed the website to Cloud Storage with CDN enabled.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Benefits 🎯</h2>
+                <h3>Performance</h3>
+                <p>Google Cloud CDN caches your content at edge locations worldwide, reducing latency and improving page load times for users globally.</p>
+
+                <h3>Scalability</h3>
+                <p>Google Cloud Storage automatically scales to handle traffic spikes without any intervention from your side.</p>
+
+                <h3>Security</h3>
+                <p>Built-in security features include SSL/TLS encryption, DDoS protection, and fine-grained access controls.</p>
+
+                <h3>Cost Efficiency</h3>
+                <p>Pay only for the storage and bandwidth you use. No need to maintain expensive servers.</p>
+
+                <h3>Reliability</h3>
+                <p>Google Cloud's infrastructure provides 99.95% uptime SLA, ensuring your website is always available.</p>
+
+                <h3>Easy Management</h3>
+                <p>Use Terraform to manage your entire infrastructure as code, making updates and rollbacks simple.</p>
+            </section>
+
+            <section>
+                <h2>Getting Started 🚀</h2>
+                <p>To deploy this website:</p>
+                <ol style="margin-left: 30px;">
+                    <li>Configure your GCP project ID in <code>terraform.tfvars</code></li>
+                    <li>Authenticate with Google Cloud using <code>gcloud auth application-default login</code></li>
+                    <li>Run <code>terraform init</code> to initialize Terraform</li>
+                    <li>Run <code>terraform plan</code> to preview changes</li>
+                    <li>Run <code>terraform apply</code> to deploy the infrastructure</li>
+                    <li>Upload the HTML files to your Storage bucket</li>
+                    <li>Configure your domain and SSL certificate</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Learn More 📖</h2>
+                <p>For more information, check out these resources:</p>
+                <ul style="margin-left: 30px;">
+                    <li><a href="https://cloud.google.com/storage/docs">Google Cloud Storage Documentation</a></li>
+                    <li><a href="https://cloud.google.com/cdn/docs">Google Cloud CDN Documentation</a></li>
+                    <li><a href="https://www.terraform.io/docs">Terraform Documentation</a></li>
+                    <li><a href="https://cloud.google.com/docs">Google Cloud Platform Documentation</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 My Static Website. All rights reserved.</p>
+            <p>Powered by Google Cloud Platform</p>
+        </footer>
+    </div>
+</body>
+</html>

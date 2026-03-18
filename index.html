@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Static Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        main {
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-card h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Welcome to My Site</h1>
+            <p>Hosted on Google Cloud Storage with CDN</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <h2>Welcome! 👋</h2>
+                <p>This is a sample static website hosted on Google Cloud Storage with Cloud CDN. It demonstrates a modern, responsive design with smooth animations and professional styling.</p>
+                <p style="margin-top: 15px;">Learn more about the infrastructure powering this site in the documentation below.</p>
+                <button class="cta-button" onclick="alert('Thank you for visiting!')">Get Started</button>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>Ultra Fast</h3>
+                        <p>Globally distributed CDN ensures lightning-fast load times from anywhere in the world.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔒</div>
+                        <h3>Secure</h3>
+                        <p>Google Cloud infrastructure with SSL/TLS encryption and DDoS protection built-in.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">💰</div>
+                        <h3>Cost Effective</h3>
+                        <p>Pay only for what you use with Google Cloud's pay-as-you-go pricing model.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Beautiful design that works seamlessly on all devices and screen sizes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🌍</div>
+                        <h3>Global Reach</h3>
+                        <p>Serve content to users worldwide with minimal latency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🛠️</div>
+                        <h3>Easy to Deploy</h3>
+                        <p>Simple deployment using Terraform and Infrastructure as Code.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About This Project</h2>
+                <p>This website is built using modern web technologies and deployed using Infrastructure as Code (Terraform). The architecture leverages Google Cloud Platform's robust services:</p>
+                <div class="tech-stack">
+                    <span class="badge">Google Cloud Storage</span>
+                    <span class="badge">Cloud CDN</span>
+                    <span class="badge">Terraform</span>
+                    <span class="badge">HTML5</span>
+                    <span class="badge">CSS3</span>
+                </div>
+                <p style="margin-top: 20px;">The site is stored in a Google Cloud Storage bucket and served through Cloud CDN for optimal performance and reliability.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <p>Interested in learning more about hosting static websites on Google Cloud? Check out the documentation included with this project.</p>
+                <p style="margin-top: 15px;">Files included:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>index.html</strong> - Main homepage</li>
+                    <li><strong>about.html</strong> - About page example</li>
+                    <li><strong>terraform.tf</strong> - Infrastructure configuration</li>
+                    <li><strong>terraform.tfvars</strong> - Configuration variables</li>
+                    <li><strong>AUTHENTICATION.md</strong> - Authentication guide</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 My Static Website. All rights reserved.</p>
+            <p>Powered by Google Cloud Platform</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">Deployed with Terraform | Hosted on Cloud Storage | Cached by Cloud CDN</p>
+        </footer>
+    </div>
+</body>
+</html>
